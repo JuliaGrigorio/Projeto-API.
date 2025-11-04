@@ -7,7 +7,7 @@ Aqui você pode **pesquisar personagens** e visualizar suas informações com um
 
 ## 🌐 Acesse o site
 
-➡️ **[Rick and Morty Explorer – Clique aqui para acessar o projeto](https://julia-oliveira.github.io/rick-and-morty-explorer/)**  
+➡️ **[Rick and Morty Explorer – Clique aqui para acessar o projeto](https://github.com/JuliaGrigorio/Projeto-API..git))**  
 
 ---
 
@@ -45,7 +45,7 @@ Durante o projeto, pude brincar com **cores chamativas**, **animações suaves**
 <img width="1287" height="656" alt="image" src="https://github.com/user-attachments/assets/adc6990c-681d-49b5-928e-8df5260e2cbd" />
 
 Copiar código
-git clone https://github.com/julia-oliveira/rick-and-morty-explorer.git
+git clone https://github.com/JuliaGrigorio/Projeto-API..git
 Abra o arquivo index.html em seu navegador.
 
 Pesquise seus personagens favoritos e explore o multiverso! 🧪
