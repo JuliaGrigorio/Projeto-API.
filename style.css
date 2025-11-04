@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@300;500;700&display=swap');
+
+/* ===== RESET E BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== FUNDO (PORTAL) ===== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #000;
+  background-image: url('https://media.tenor.com/VtYvS7P-LJwAAAAC/rick-and-morty-portal.gif');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: #e5e5e5;
+  padding-bottom: 40px;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 0;
+}
+
+/* ===== HEADER ===== */
+header {
+  position: relative;
+  width: 100%;
+  z-index: 2;
+  padding: 50px 10px;
+  background: linear-gradient(135deg, rgba(0,255,102,0.9), rgba(0,255,255,0.9), rgba(170,0,255,0.9));
+  background-size: 400% 400%;
+  animation: gradientShift 6s ease infinite;
+  box-shadow: 0 0 30px rgba(0,255,180,0.4);
+  border-bottom: 3px solid #00ffb7;
+}
+
+/* animação suave de oscilação de cores */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+/* centraliza o conteúdo (logo e texto) */
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header-inner img {
+  width: 580px;       /* logo grandona */
+  max-width: 95%;
+  display: block;
+  margin: 10px auto 20px;
+  filter: none;
+}
+
+.header-inner h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.8rem;
+  color: #101010;
+  margin: 5px 0;
+}
+
+.header-inner p {
+  font-weight: 600;
+  color: #141414;
+  margin: 0;
+}
+
+/* ===== SEARCH ===== */
+.search-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 30px 0 8px;
+  z-index: 2;
+  position: relative;
+}
+
+input {
+  padding: 12px;
+  width: 320px;
+  max-width: calc(100% - 160px);
+  border-radius: 10px;
+  border: 2px solid #00ffb7;
+  background-color: rgba(12,26,37,0.9);
+  color: #fff;
+  font-size: 1rem;
+  box-shadow: 0 0 10px #00ffb7;
+  transition: all 0.25s ease;
+}
+
+input:focus {
+  border-color: #00eaff;
+  box-shadow: 0 0 15px #00eaff;
+  outline: none;
+}
+
+button {
+  background: linear-gradient(135deg, #00ffb7, #5f00ff);
+  border: none;
+  padding: 12px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.5px;
+  box-shadow: 0 0 12px rgba(0,255,180,0.5);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 22px rgba(0,255,180,0.9);
+}
+
+/* ===== GRID DE RESULTS ===== */
+.results {
+  z-index: 2;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 22px;
+  margin: 18px;
+  padding: 6px;
+  align-items: stretch;
+}
+
+/* ===== CARD ===== */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(10,30,30,0.85), rgba(5,10,20,0.65));
+  border: 1px solid rgba(0,255,180,0.18);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 30px rgba(0,0,0,0.6);
+  text-align: center;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  backdrop-filter: blur(6px);
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(0,255,180,0.25);
+}
+
+.card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  flex-shrink: 0;
+  display: block;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+
+.info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 14px;
+  background-color: rgba(0,0,0,0.35);
+}
+
+h3 {
+  color: #00ffb7;
+  margin-bottom: 8px;
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 0 0 6px #00ffb7;
+}
+
+.detail {
+  font-size: 0.9rem;
+  margin: 3px 0;
+  color: #d1faff;
+  text-shadow: 0 0 4px rgba(0,255,255,0.18);
+}
+
+/* status colors */
+.status-alive { color: #00ff9f; font-weight:700; text-shadow:0 0 6px #00ff9f; }
+.status-dead  { color: #ff3d5a; font-weight:700; text-shadow:0 0 6px #ff3d5a; }
+.status-unknown{ color: #ffffff; font-weight:700; text-shadow:0 0 4px #fff; }
+
+/* ===== FOOTER ===== */
+footer {
+  z-index: 2;
+  position: relative;
+  background: linear-gradient(135deg, #0b1221, #061018);
+  text-align: center;
+  padding: 18px;
+  color: #bfbfbf;
+  border-top: 1px solid rgba(0,255,180,0.08);
+  margin-top: 28px;
+}
+
+.error {
+  text-align: center;
+  color: #ff3d5a;
+  font-weight: bold;
+  text-shadow: 0 0 8px #ff3d5a;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+/* ==== EFEITO NEON NAS IMAGENS ==== */
+.card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  flex-shrink: 0;
+  display: block;
+  position: relative;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+  border-radius: 0 0 10px 10px;
+  box-shadow:
+    0 0 10px #00ffb7,
+    0 0 20px #00eaff,
+    0 0 30px #5f00ff,
+    0 0 40px rgba(0,255,180,0.8);
+  animation: neonPulse 3s ease-in-out infinite;
+}
+
+/* animação de pulsação suave do brilho */
+@keyframes neonPulse {
+  0%, 100% {
+    box-shadow:
+      0 0 10px #00ffb7,
+      0 0 20px #00eaff,
+      0 0 30px #5f00ff,
+      0 0 40px rgba(0,255,180,0.8);
+  }
+  50% {
+    box-shadow:
+      0 0 18px #00ffb7,
+      0 0 28px #00eaff,
+      0 0 45px #5f00ff,
+      0 0 65px rgba(0,255,180,1);
+  }
+}
+.main-logo {
+  width: 420px;
+  max-width: 90%;
+  margin-bottom: 15px;
+  filter:
+    drop-shadow(0 0 12px #00ffb7)
+    drop-shadow(0 0 25px #00eaff)
+    drop-shadow(0 0 40px #5f00ff);
+  animation: logoPulse 3s ease-in-out infinite;
+}
+
+@keyframes logoPulse {
+  0%, 100% {
+    filter:
+      drop-shadow(0 0 12px #00ffb7)
+      drop-shadow(0 0 25px #00eaff)
+      drop-shadow(0 0 40px #5f00ff);
+  }
+  50% {
+    filter:
+      drop-shadow(0 0 22px #00ffb7)
+      drop-shadow(0 0 35px #00eaff)
+      drop-shadow(0 0 55px #5f00ff);
+  }
+}
+
