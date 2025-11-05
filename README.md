@@ -7,7 +7,7 @@ Aqui você pode **pesquisar personagens** e visualizar suas informações com um
 
 ## 🌐 Acesse o site
 
-➡️ **[Rick and Morty Explorer – Clique aqui para acessar o projeto](https://github.com/JuliaGrigorio/Projeto-API..git))**  
+➡️ **[Rick and Morty Explorer – Clique aqui para acessar o projeto](https://juliagrigorio.github.io/Projeto-API./))**  
 
 ---
 
