@@ -24,10 +24,10 @@ Durante o projeto, pude brincar com **cores chamativas**, **animações suaves**
 
 ## 🧠 Tecnologias utilizadas
 
-- 🧩 **HTML5** → estrutura e organização do conteúdo  
-- 🎨 **CSS3** → estilização com gradientes, efeitos neon e animações  
+- 🧩 **HTML** → estrutura e organização do conteúdo  
+- 🎨 **CSS** → estilização com gradientes, efeitos neon e animações  
 - ⚡ **JavaScript (Fetch API)** → consumo da API e exibição dinâmica dos resultados  
-- 🌐 **API Rick and Morty (Wikimori)** → fornecimento dos dados e imagens dos personagens  
+- 🌐 **API Rick and Morty** → fornecimento dos dados e imagens dos personagens  
 
 ---
 
